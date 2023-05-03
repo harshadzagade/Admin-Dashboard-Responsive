@@ -272,11 +272,9 @@ main .tik-req-btn {
   color: var(--color-dark);
 }
 
-main .btn-name{
+main .btn-name {
   margin-top: 0.2rem;
 }
-
-
 
 main .filter-buttons {
   padding: 15px 0 10px;
@@ -332,8 +330,6 @@ main .ticket-label {
   width: 5rem;
   color: var(--color-dark);
 }
-
-
 
 main .requests {
   margin-top: 1rem;
@@ -484,10 +480,7 @@ main .tik-pri {
 
 /* END RECENT UPDATES */
 
-
 /* END RIGHT SECTION */
-
-
 
 /* START description */
 main .info-ticket-title {
@@ -643,6 +636,117 @@ main .tik-desc-chat {
 
 /* END description */
 
+/* END New ticket */
+.ticket-form {
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--box-shadow);
+  transition: all 300ms ease;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form-style ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.form-style ul li {
+  display: block;
+  margin-bottom: 10px;
+  min-height: 35px;
+}
+
+.form-style label{
+	margin:2px 0 8px 5px;
+	padding:0px;
+	display:block;
+	font-weight: bold;
+}
+
+.field-select{
+	width: 100%;
+}
+
+.form-style select:focus{
+	-moz-box-shadow: 0 0 8px #88D5E9;
+	-webkit-box-shadow: 0 0 8px #88D5E9;
+	box-shadow: 0 0 8px #88D5E9;
+	border: 1px solid #88D5E9;
+}
+
+.form-style select{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+	margin:0px;
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;	
+}
+
+
+.form-style ul li .field-style {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #b0cfe0;
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.form-style ul li .field-style:focus {
+  box-shadow: 0 0 5px #b0cfe0;
+  border: 1px solid #b0cfe0;
+}
+.form-style ul li .field-split {
+  width: 49%;
+}
+.form-style ul li .field-full {
+  width: 100%;
+}
+.form-style ul li input.align-left {
+  float: left;
+}
+.form-style ul li input.align-right {
+  float: right;
+}
+.form-style ul li textarea {
+  width: 100%;
+  height: 100px;
+}
+.form-style ul li input[type="button"],
+.form-style ul li input[type="submit"] {
+  -moz-box-shadow: inset 0px 1px 0px 0px #3985b1;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #3985b1;
+  box-shadow: inset 0px 1px 0px 0px #3985b1;
+  background-color: #216288;
+  border: 1px solid #17445e;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  padding: 8px 18px;
+  text-decoration: none;
+  font: 12px Arial, Helvetica, sans-serif;
+}
+.form-style ul li input[type="button"]:hover,
+.form-style ul li input[type="submit"]:hover {
+  background: linear-gradient(to bottom, #2d77a2 5%, #337da8 100%);
+  background-color: #28739e;
+}
+
+/* END New ticket */
+
 /* START MEDIA QUERIES */
 /* TABLETS AND SMALL LAPTOPS */
 @media screen and (max-width: 1200px) {
@@ -667,8 +771,6 @@ main .tik-desc-chat {
     position: relative;
     margin-top: 1.8rem;
   }
-
- 
 
   /* Request */
   main .tik-head {
@@ -735,8 +837,6 @@ main .tik-desc-chat {
     margin-top: 8rem;
     padding: 0 1rem;
   }
-
-
 
   .right {
     width: 94%;

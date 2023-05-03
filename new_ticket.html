@@ -74,125 +74,42 @@
 
     <main>
       <div class="main-title">
-        <h1 class="tik-type-title">Request</h1>
-        <button class="tik-req-btn">
-          <span class="material-icons-sharp btn-icon">
-            add
-          </span>
-          <span class="btn-name"> New Ticket</span>
-        </button>
+        <h1 class="tik-type-title">New Ticket</h1>
       </div>
-
-      <div class="filter-buttons ">
-        <button class="button  active list" data-filter="all">All</button>
-        <button class="button  filter-button list" data-filter="unassigned">Unassigned</button>
-        <button class="button  filter-button list " data-filter="assigned">Assigned</button>
-        <button class="button  filter-button list">Pending</button>
-      </div>
-
-
-      <!-- recent-orders -->
-      <!-- <div class="recent-orders">
-          <h2>Request</h2>
-          <table id="recent-orders--table">
-            <thead>
-
-            </thead> -->
-      <!-- Add tbody here | JS insertion -->
-      <!-- </table>
-          <a href="#">Show All</a>
-        </div>-->
 
 
       <!-- Request -->
-      <div class="requests ">
-        <!-- <h2>Request</h2> -->
-        <div class="tik-info unassigned">
-          <div class="tik-head">
-            <h3 class="tik-title">Replace keyboard</h3>
-            <p class="tik-time">
-              3h ago
-            </p>
-          </div>
-          <div class="tik-msg">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum fugit est nobis vitae doloribus
-              blanditiis veritatis ex tenetur natus quidem. Labore fuga nemo numquam molestiae maiores error tempore!
-              Cumque, et?
-            </p>
-          </div>
-          <div class="tik-other">
-            <p class="tik-id">
-              #3256
-            </p>
-            <p class="tik-pri">
-              High
-            </p>
-            <p class="tik-comment">
-              <span class="material-icons-sharp">
-                chat_bubble_outline
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="tik-info assigned">
-          <div class="tik-head">
-            <h3 class="tik-title">Replace Monitor</h3>
-            <p class="tik-time">
-              3h ago
-            </p>
-          </div>
-          <div class="tik-msg">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum fugit est nobis vitae doloribus
-              blanditiis veritatis ex tenetur natus quidem. Labore fuga nemo numquam molestiae maiores error tempore!
-              Cumque, et?
-            </p>
-          </div>
-          <div class="tik-other">
-            <p class="tik-id">
-              #3256
-            </p>
-            <p class="tik-pri">
-              High
-            </p>
-            <p class="tik-comment">
-              <span class="material-icons-sharp">
-                chat_bubble_outline
-              </span>
-            </p>
-          </div>
-        </div>
-        <div class="tik-info pending">
-          <div class="tik-head">
-            <h3 class="tik-title">Replace Mouse</h3>
-            <p class="tik-time">
-              3h ago
-            </p>
-          </div>
-          <div class="tik-msg">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum fugit est nobis vitae doloribus
-              blanditiis veritatis ex tenetur natus quidem. Labore fuga nemo numquam molestiae maiores error tempore!
-              Cumque, et?
-            </p>
-          </div>
-          <div class="tik-other">
-            <p class="tik-id">
-              #3256
-            </p>
-            <p class="tik-pri">
-              High
-            </p>
-            <p class="tik-comment">
-              <span class="material-icons-sharp">
-                chat_bubble_outline
-              </span>
-            </p>
-          </div>
-        </div>
+      <section class="ticket-form">
+        <form class="form-style">
+          <ul>
+            <li>
+              <label for="" class="">Subject</label>
+              <select name="field4" class="field-select field-style">
+                <div class="field-style">
+                  <option value="Advertise" hidden>Subject</option>
+                  <option value="Advertise">Advertise</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="General Question">General</option>
+                </div>
 
-      </div>
+              </select>
+            </li>
+            <li>
+              <input type="text" name="field3" class="field-style field-split align-left" placeholder="Phone" />
+              <input type="url" name="field4" class="field-style field-split align-right" placeholder="Website" />
+            </li>
+            <li>
+              <input type="text" name="field3" class="field-style field-full align-none" placeholder="Subject" />
+            </li>
+            <li>
+              <textarea name="field5" class="field-style" placeholder="Message"></textarea>
+            </li>
+            <li>
+              <input type="submit" value="Send Message" />
+            </li>
+          </ul>
+        </form>
+      </section>
       <!-- Request -->
 
     </main>
