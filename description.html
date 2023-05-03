@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="Logo" />
+                    <h2>EGA<span class="danger">TOR</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp"> close </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="#" class="active">
+                    <span class="material-icons-sharp"> dashboard </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> person_outline </span>
+                    <h3>Customers</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> receipt_long </span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> insights </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> mail_outline </span>
+                    <h3>Messages</h3>
+                    <span class="message-count">26</span>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> inventory </span>
+                    <h3>Products</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> report_gmailerrorred </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> settings </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> add </span>
+                    <h3>Add Product</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp"> logout </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+
+            <!-- request -->
+            <div class="info-ticket-title">
+                <div class="info-tik-head">
+                    <h2 class="info-tik-title">
+                        Replace Keyboard
+                    </h2>
+                    <p class="info-tik-id">
+                        #3256
+                    </p>
+                    <p class="info-tik-pri">
+                        High
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Request -->
+            <section class="desc-chat">
+                <div class="tik-desc-chat">
+                    <div class="msg left-msg">
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">BOT</div>
+                                <div class="msg-info-time">12:45</div>
+                            </div>
+
+                            <div class="msg-text">
+                                Hi, welcome to SimpleChat! Go ahead and send me a message. 😄
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="msg right-msg">
+
+                        <div class="msg-bubble">
+                            <div class="msg-info">
+                                <div class="msg-info-name">Harshad</div>
+                                <div class="msg-info-time">12:46</div>
+                            </div>
+
+                            <div class="msg-text">
+                                You can change your name in JS section!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="msger-inputarea">
+                    <input type="text" class="msger-input" placeholder="Enter your message...">
+                    <button type="submit" class="msger-send-btn">Send</button>
+                </form>
+            </section>
+
+            <!-- Request -->
+        </main>
+
+
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp"> menu </span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-icons-sharp active"> light_mode </span>
+                    <span class="material-icons-sharp"> dark_mode </span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Bruno</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="Profile Picture" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-updates">
+                <h2>Recent Updates</h2>
+                <!-- Add updates div here | JS insertion -->
+            </div>
+
+            <div class="sales-analytics">
+                <h2>Sales Analytics</h2>
+                <div id="analytics">
+                    <!-- Add items div here | JS insertion -->
+                </div>
+                <div class="item add-product">
+                    <div>
+                        <span class="material-icons-sharp"> add </span>
+                        <h3>Add Product</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./constants/recent-order-data.js"></script>
+    <script src="./constants/update-data.js"></script>
+    <script src="./constants/sales-analytics-data.js"></script>
+    <script src="./index.js"></script>
+    <script src="./chat.js"></script>
+
+    <script>
+        const msgerForm = get(".msger-inputarea");
+        const msgerInput = get(".msger-input");
+        const msgerChat = get(".tik-desc-chat");
+
+        const BOT_MSGS = [
+            "Hi, how are you?",
+            "Ohh... I can't understand what you trying to say. Sorry!",
+            "I like to play games... But I don't know how to play!",
+            "Sorry if my answers are not relevant. :))",
+            "I feel sleepy! :("
+        ];
+
+        // Icons made by Freepik from www.flaticon.com
+        const BOT_NAME = "BOT";
+        const PERSON_NAME = "Harshad";
+
+        msgerForm.addEventListener("submit", event => {
+            event.preventDefault();
+
+            const msgText = msgerInput.value;
+            if (!msgText) return;
+
+            appendMessage(PERSON_NAME, "right", msgText);
+            msgerInput.value = "";
+
+            botResponse();
+        });
+
+        function appendMessage(name, side, text) {
+            //   Simple solution for small apps
+            const msgHTML = `
+            <div class="msg ${side}-msg">
+            <div class="msg-bubble">
+                <div class="msg-info">
+                <div class="msg-info-name">${name}</div>
+                <div class="msg-info-time">${formatDate(new Date())}</div>
+                </div>
+
+                <div class="msg-text">${text}</div>
+            </div>
+            </div>
+        `;
+
+            msgerChat.insertAdjacentHTML("beforeend", msgHTML);
+            msgerChat.scrollTop += 500;
+        }
+
+        function botResponse() {
+            const r = random(0, BOT_MSGS.length - 1);
+            const msgText = BOT_MSGS[r];
+            const delay = msgText.split(" ").length * 100;
+
+            setTimeout(() => {
+                appendMessage(BOT_NAME, "left", msgText);
+            }, delay);
+        }
+
+        // Utils
+        function get(selector, root = document) {
+            return root.querySelector(selector);
+        }
+
+        function formatDate(date) {
+            const h = "0" + date.getHours();
+            const m = "0" + date.getMinutes();
+
+            return `${h.slice(-2)}:${m.slice(-2)}`;
+        }
+
+        function random(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+
+    </script>
+</body>
+
+</html>
